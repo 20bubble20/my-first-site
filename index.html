@@ -1,9 +1,28 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <h1>
-            My first website!
-        </h1>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Button Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+<body>
+  <div class="page">
+    <!-- fixed image slot above the header/button -->
+    <div class="image-slot">
+      <img
+        id="toggle-image"
+        class="hidden-image"
+        src="https://emojitool.com/img/apple/ios-11.1/face-with-cowboy-hat-54.png"
+        alt="Toggled content"
+      />
+    </div>
+
+    <h1>Hello Everyone</h1>
+
+    <button class="fancy-btn selected" id="fancy-btn">Yeehaw</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 
 </html>
