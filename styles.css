@@ -1,0 +1,83 @@
+/* Basic page styling */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: linear-gradient(135deg, #f9fafb, #e5edff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+/* The fancy button */
+.fancy-btn {
+  padding: 0.8rem 2.2rem;
+  border-radius: 999px; /* very round */
+  border: none;
+  background: #ff6b81; /* base color (reddish/pink) */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  transform: translateY(0);
+  transition:
+    background 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+/* Hover: slightly darker + softer shadow */
+.fancy-btn:hover {
+  background: #ff526d;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.22);
+}
+
+/* Active (mouse down): looks “pressed in” */
+.fancy-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+/* Toggled/selected state after click (green) */
+.fancy-btn.selected {
+  background: #4caf50; /* green when "on" */
+}
+
+/* Container that always reserves space for the image */
+.image-slot {
+  height: 260px;             /* reserve vertical space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;     /* space between image and header */
+}
+
+/* Image itself: hidden visually at first, but space is still reserved */
+.hidden-image {
+  max-width: 400px;
+  width: 100%;
+  max-height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;                /* invisible but space still exists */
+  transition: opacity 0.2s ease;
+}
+
+/* When visible: fade in, but no layout shift */
+.hidden-image.visible {
+  opacity: 1;
+}
